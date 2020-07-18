@@ -31,7 +31,7 @@ for entry in tqdm.tqdm(entries):
         year, month, day = date.split('-')
         datestr = f'{year}{month}{day}T000000'
 
-        output_file = os.path.join(args.output_location, f'{id}_{datestr}_{band}.tif')
+        output_file = os.path.join(args.output_location,  '{id}_{datestr}_{band}.tif')
         # copy the file to the output dir using its new name
         shutil.copyfile(os.path.join(temp_path,  temp_entry), output_file)
     shutil.rmtree(temp_path)
